@@ -68,7 +68,6 @@ function renderTable() {
     `).join('');
 }
 
-// Função para editar fornecedor
 function editarFornecedor(index) {
     const f = fornecedores[index];
     
