@@ -1,0 +1,160 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS DE COR */
+:root {
+    --verde-principal: #1b5e20;
+    --verde-secundario: #2e7d32;
+    --verde-claro: #e8f5e9;
+    --azul-botao: #1e88e5;
+    --azul-hover: #1565c0;
+    --branco: #ffffff;
+    --cinza-borda: #e0e0e0;
+    --cinza-texto: #444;
+}
+
+/* BODY */
+body {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background: var(--page-bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    text-align: center;
+    color: var(--verde-principal);
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* SEÇÕES (CARDS) */
+section {
+    background-color: var(--branco);
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* SUBTÍTULOS */
+h2 {
+    color: var(--verde-secundario);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+h3 {
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+}
+
+/* TEXTOS */
+p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* INPUTS E SELECT */
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--cinza-borda);
+    font-size: 14px;
+}
+
+/* FOCO */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--verde-secundario);
+}
+
+/* BOTÕES */
+button {
+    background-color: var(--azul-botao);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--azul-hover);
+    transform: translateY(-1px);
+}
+
+/* BOTÃO PRINCIPAL */
+a button {
+    width: 100%;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+/* ENDEREÇOS */
+#enderecos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.endereco {
+    background-color: #fafafa;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--cinza-borda);
+}
+
+/* BOTÃO REMOVER */
+.endereco button {
+    background-color: #d32f2f;
+}
+
+.endereco button:hover {
+    background-color: #b71c1c;
+}
+
+/* LISTA STATUS PEDIDO */
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+/* LINHA */
+hr {
+    margin: 22px 0;
+    border: none;
+    border-top: 1px solid var(--cinza-borda);
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}

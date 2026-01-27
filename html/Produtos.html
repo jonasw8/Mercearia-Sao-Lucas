@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | Mercearia São Lucas</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/Compras.css">
+</head>
+<body>
+    
+<header>
+    <div class="container top-row">
+        <div class="logo-container">
+             <a href="../index.html">
+                <img src="../img/Mercearia_Sao_lucas-removebg-preview.png" alt="Logo da loja" class="logo">
+            </a>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Buscar produtos, marcas e muito mais...">
+            <button class="search-btn">🔍</button>
+        </div>
+
+        <div class="auth-link">
+            <a href="../html/login.html" id="signup-link" aria-label="Entrar ou cadastrar-se">👤Entrar ou cadastrar-se</a>
+        </div>
+    </div>
+
+    <nav class="nav-menu">
+        <ul class="nav-list">
+            <a href="../html/Produtos.html">Produtos</a>
+            <a href="../html/indexcompra.html">Compras</a>
+            <a href="../html/fornecedores.html">Trabalhe conosco</a>
+        </ul>
+    </nav>
+</header>
+
+<h1>PRODUTOS MAIS VENDIDOS</h1>
+
+<main class="container">
+    <section class="products-grid">
+        <div class="product-card"
+             data-id="maca-01"
+             data-name="Maça Gala Importada"
+             data-price="8.90"
+             data-unit="un">
+            <div class="product-img">🍎</div>
+            <h3>Maçã Gala Importada</h3>
+            <p class="price">R$ 8,90 <span>kg</span></p>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="product-card"
+             data-id="pao-01"
+             data-name="Pão Francês"
+             data-price="14.50"
+             data-unit="un">
+            <div class="product-img">🍞</div>
+            <h3>Pão Francês</h3>
+            <p class="price">R$ 14,50 <span>kg</span></p>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="product-card"
+             data-id="leite-01"
+             data-name="Leite Integral 1L"
+             data-price="5.20"
+             data-unit="un">
+            <div class="product-img">🥛</div>
+            <h3>Leite Integral 1L</h3>
+            <p class="price">R$ 5,20</p>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="product-card"
+             data-id="cafe-01"
+             data-name="Café Tradicional 500g"
+             data-price="18.90"
+             data-unit="un">
+            <div class="product-img">☕</div>
+            <h3>Café Tradicional 500g</h3>
+            <p class="price">R$ 18,90</p>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+    </section>
+</main>
+
+<h1>PARA AS CRIANÇAS</h1>
+
+<main class="container">
+    <section class="products-grid">
+        <div class="product-card"
+             data-id="chocolate-01"
+             data-name="Chocolate"
+             data-price="9,90"
+             data-unit="un">
+            <div class="product-img">🍫</div>
+            <h3>Chocolate ao Leite</h3>
+            <p class="price">R$ 9,90</p>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="product-card"
+             data-id="cookie-01"
+             data-name="Cookie"
+             data-price="5,90"
+             data-unit="un">
+            <div class="product-img">🍪</div>
+            <h3>Cookies</h3>
+            <p class="price">R$ 5,90</p>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="product-card"
+             data-id="bombom-01"
+             data-name="Bombom"
+             data-price="1.99"
+             data-unit="un">
+            <div class="product-img">🍬</div>
+            <h3>Bombom</h3>
+            <p class="price">R$ 1,99</p>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="product-card"
+             data-id="sorvete-01"
+             data-name="Sorvete"
+             data-price="19.99"
+             data-unit="un">
+            <div class="product-img">🍦</div>
+            <h3>Sorvete</h3>
+            <p class="price">R$ 19,99</p>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+    </section>
+</main>
+
+<!-- botão para abrir o carrinho -->
+<button id="open-cart-btn" aria-label="Abrir carrinho">
+  🛒 <span id="cart-count">0</span>
+</button>
+
+<!-- drawer -->
+<aside id="cart-drawer" aria-hidden="true">
+  <header>
+    <h3>Seu carrinho</h3>
+    <button id="close-cart-btn" aria-label="Fechar carrinho">✕</button>
+  </header>
+
+  <div id="cart-items">
+    <!-- .cart-item serão inseridos pelo JS -->
+    <!-- exemplo de mensagem vazia:
+    <div class="empty">Seu carrinho está vazio</div>
+    -->
+  </div>
+
+  <div class="summary">
+    <div class="row"><small>Subtotal</small><strong id="cart-subtotal">R$ 0,00</strong></div>
+    <div class="row"><small>Frete</small><span id="cart-shipping">—</span></div>
+
+    <button id="checkout-btn">Finalizar compra</button>
+    <button id="clear-cart-btn">Limpar carrinho</button>
+  </div>
+</aside>
+
+<script src="../js/Produtos.js"></script>
+</body>
+</html>

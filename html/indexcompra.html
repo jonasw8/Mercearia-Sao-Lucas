@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Compra - Produto</title>
+
+    <!-- Espaço para CSS -->
+    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <header>
+        <div class="container top-row">
+            <div class="logo-container">
+                 <a href="../index.html">
+                    <img src="../img/Mercearia_Sao_lucas-removebg-preview.png" alt="Logo da loja" class="logo">
+                </a>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar produtos, marcas e muito mais...">
+                <button class="search-btn">🔍</button>
+            </div>
+    
+            <div class="auth-link">
+                <a href="../html/login.html" id="signup-link" aria-label="Entrar ou cadastrar-se">👤Entrar ou cadastrar-se</a>
+            </div>
+        </div>
+    
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <a href="../html/Produtos.html">Produtos</a>
+                <a href="../html/indexcompra.html">Compras</a>
+                <a href="../html/fornecedores.html">Trabalhe conosco</a>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Finalizar Compra</h1>
+
+    <!-- Produto vindo de outra página (Só linkar um produto a esta pagina e alterar os nomes e valores genericos) -->
+    <section>
+        <h2>Produto</h2>
+
+        <p>Produto: Arroz 5kg</p>
+        <p>Preço unitário: R$ 1,00</p>
+
+        <label>
+            Quantidade:
+            <input type="number" id="quantidade" value="1" min="1" onchange="calcularSubtotal()">
+        </label>
+    </section>
+
+    
+    <section>
+        <h2>Subtotal</h2>
+        <p>R$ <span id="subtotal">1.00</span></p>
+    </section>
+
+    
+    <section>
+        <h2>Endereço de Entrega</h2>
+
+        <div id="enderecos">
+            <div class="endereco">
+                <input type="text" placeholder="Rua">
+                <input type="text" placeholder="Número">
+                <input type="text" placeholder="Bairro">
+                <input type="text" placeholder="Cidade">
+                <button type="button" onclick="removerEndereco(this)">Remover</button>
+            </div>
+        </div>
+
+        <button type="button" onclick="adicionarEndereco()">Adicionar Endereço</button>
+    </section>
+
+    
+    <section>
+        <h2>Forma de Pagamento</h2>
+
+        <select id="formaPagamento" onchange="mostrarCamposCartao()">
+            <option value="">Selecione</option>
+            <option value="credito">Cartão de Crédito</option>
+            <option value="debito">Cartão de Débito</option>
+            <option value="boleto">Boleto</option>
+        </select>
+
+    
+        <div id="dadosCartao" style="display: none;">
+            <h3>Dados do Cartão</h3>
+
+            <input type="text" placeholder="Nome no cartão">
+            <input type="text" placeholder="Número do cartão">
+            <input type="text" placeholder="Validade (MM/AA)">
+            <input type="text" placeholder="CVV">
+        </div>
+    </section>
+
+    <a href="pedido.html">
+    <button>Finalizar Compra</button>
+</a>
+
+    <!-- JavaScript -->
+    <script src="../js/buy.js"></script>
+
+</body>
+</html>
